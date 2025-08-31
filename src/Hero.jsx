@@ -7,11 +7,16 @@ export default function Hero() {
         <li key={element}>{element}</li>
     ))
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        const formdata = new FormData(event.currentTarget)
-        const newitem = formdata.get("ingredient")
-        setIngredients((prevstate) => [...prevstate, newitem])
+    // function handleSubmit(event) {
+    //     event.preventDefault();
+    //     const formdata = new FormData(event.currentTarget)
+    //     const newitem = formdata.get("ingredient")
+    //     setIngredients((prevstate) => [...prevstate, newitem])
+    // }
+
+    function handleSubmit(formData) {
+        const newitem = formData.get("ingredient");
+        setIngredients((prevstate)=>[...prevstate, newitem]);
     }
 
     return (
@@ -25,7 +30,7 @@ export default function Hero() {
                     </p>
                 </div>
             </div>
-            <form className="flex flex-row gap-15 justify-center" onSubmit={handleSubmit}>
+            <form className="flex flex-row gap-15 justify-center" action={handleSubmit}>
                 <input
                 aria-label="Add Ingredients" type="text"
                 placeholder="e.g. dhaniya"
