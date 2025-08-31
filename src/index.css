@@ -10,18 +10,6 @@
       margin: 0;
     }
 
-    main {
-      @apply bg-cover bg-center bg-no-repeat relative;
-    }
-    main::before {
-      @apply absolute inset-0 bg-[url('/bgimage.jpg')] bg-cover opacity-65;
-      content: '';
-      z-index: 1;
-    }
-    main > * {
-      @apply relative z-10;
-    }
-
     h1 {
       @apply text-4xl font-semibold
     }
@@ -29,4 +17,10 @@
     h2 {
       @apply text-3xl font-semibold
     }
+}
+
+@layer utilities {
+  .text-shadow-amber {
+    text-shadow: 2px 2px 4px rgba(217, 119, 6, 0.5);
+  }
 }
