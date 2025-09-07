@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @layer base {
-    html {
-      font-family: var(--font-sans);
-      margin: 0;
-    }
+  html {
+    font-family: var(--font-sans);
+    margin: 0;
+    @apply text-amber-900;
+  }
 
-    h1 {
-      @apply text-4xl font-semibold
-    }
+  h1 {
+    @apply text-4xl font-semibold;
+  }
 
-    h2 {
-      @apply text-3xl font-semibold
-    }
+  h2 {
+    @apply text-3xl font-semibold;
+  }
 }
 
 @layer utilities {
