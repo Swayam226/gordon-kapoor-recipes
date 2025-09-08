@@ -1,18 +1,17 @@
-import Header from "./Header"
-import Hero from "./Hero"
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
-
   return (
     <>
       <Header
-        src = "/chef-claude-icon.png"
-        alt = "icon of site"
-        imgclass = "size-12"
+        src="/chef-claude-icon.png"
+        alt="icon of site"
+        imgclass="size-12"
       />
-      <Hero/>
+      <Hero />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

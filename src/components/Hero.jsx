@@ -41,16 +41,18 @@ export default function Hero() {
         />
         <button
           type="submit"
-          className="rounded-md bg-amber-400  h-12 w-75 shadow-md placeholder: text-[18px]"
+          className="rounded-md bg-amber-400  h-12 w-75 shadow-md placeholder: text-[18px] cursor-pointer"
         >
           + Add Ingredient
         </button>
       </form>
 
-      <ul className="list-disc list-inside">{items}</ul>
-
-      <div className="h-100 w-250 bg-amber-400 flex flex-col items-center font-bold">
-        <span className="text-3xl pt-5">My Ingredients</span>
+      <div className="w-250 bg-amber-400 flex flex-col items-center font-bold h-auto">
+        <span className="text-3xl pt-5 text-amber-950">My Ingredients</span>
+        <div className="w-200 border-blue-800 mt-6 h-auto">
+          <p>{items.length > 0 ? "" : "Can't find any ingredients :("}</p>
+          <ul className="list-none list-inside p-6">{items}</ul>
+        </div>
       </div>
     </main>
   );
