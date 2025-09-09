@@ -35,7 +35,7 @@ export default function Hero() {
         <input
           aria-label="Add Ingredients"
           type="text"
-          placeholder="e.g. dhaniya"
+          placeholder="e.g. spinach"
           className="shadow-md bg-gray-100 h-12 w-150 rounded-md placeholder: pl-2 text-amber-900 placeholder:text-amber-800"
           name="ingredient"
         />
@@ -47,7 +47,7 @@ export default function Hero() {
         </button>
       </form>
 
-      <div className="w-250 bg-amber-400 flex flex-col items-center font-bold h-auto">
+      <div className="w-250 bg-amber-400 flex flex-col items-center font-bold h-auto rounded-xl">
         <span className="text-3xl pt-5 text-amber-950">My Ingredients</span>
         <div className="w-200 border-blue-800 mt-6 h-auto">
           <p>{items.length > 0 ? "" : "Can't find any ingredients :("}</p>
