@@ -23,13 +23,16 @@ export default function Hero() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-900 leading-tight text-shadow-amber">
             Few ingredients in the kitchen?
           </h1>
-          <p className="text-2xl font-semibold md:text-3xl text-amber-800 mt-2">
-            No Worries, we've got you covered!
+          <p className="text-2xl font-semibold md:text-3xl text-amber-700 mt-3">
+            No Worries, We've got you covered!
+          </p>
+          <p className="text-lg mt-4 font-medium text-amber-600">
+            Add your leftover ingredients and let us do the magic
           </p>
         </div>
       </div>
       <form
-        className="flex flex-row gap-15 justify-center"
+        className="flex flex-row gap-22 justify-center"
         action={handleSubmit}
       >
         <input
