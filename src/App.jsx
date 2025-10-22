@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 function App() {
   return (
     <div className="min-h-screen w-full bg-white relative overflow-hidden">
-      {/* Amber Glow Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
