@@ -1,10 +1,12 @@
 import { useState } from "react";
 import GenRecipe from "./GenRecipe";
 import IngredientList from "./IngredientList";
+import { getRecipeFromGemini } from "../api/gemini";
 
 export default function Hero() {
   const [ingredients, setIngredients] = useState([]);
-  const [recipeShown, togglerecipeShown] = useState(false);
+  // const [recipeShown, togglerecipeShown] = useState(false);
+  const [recipe, setRecipe] = useState("");
 
   const items = ingredients.map((element) => <li key={element}>{element}</li>);
 
@@ -14,8 +16,14 @@ export default function Hero() {
     setIngredients((prev) => [...prev, newitem]);
   }
 
-  function showRecipe() {
-    togglerecipeShown((prev) => !prev);
+  // function showRecipe() {
+  //   togglerecipeShown((prev) => !prev);
+  // }
+
+  // showing ai recipe
+  async function fetchRecipe() {
+    const recipeText = await getRecipeFromGemini(ingredients);
+    setRecipe(recipeText);
   }
 
   return (
@@ -53,31 +61,11 @@ export default function Hero() {
         </button>
       </form>
 
-      <div className="w-250 bg-amber-400 flex flex-col items-center font-bold h-auto rounded-xl">
-        <span className="text-3xl pt-5 text-amber-850">
-          Ingredients on Hand!!
-        </span>
+      {ingredients.length > 0 && (
+        <IngredientList ingredients={ingredients} getRecipe={fetchRecipe} />
+      )}
 
-        <div className="w-200 border-blue-800 mt-6 h-auto">
-          {/* <p>{items.length > 0 ? "" : "Can't find any ingredients :("}</p> */}
-          <IngredientList length={items.length} />
-          <ul className="list-none list-inside p-6">{items}</ul>
-        </div>
-      </div>
-
-      {items.length > 0 ? (
-        <div className="w-250 text-amber-850 text-2xl h-20 bg-amber-400 flex flex-row rounded-xl items-center justify-center gap-30">
-          <span className="font-bold">Ready for the Recipe ?</span>
-          <button
-            type="button"
-            className="text-[17px] rounded-md text-amber-200 bg-amber-600 h-10 w-40 hover:drop-shadow-xl"
-            onClick={showRecipe}
-          >
-            Get Recipe!
-          </button>
-        </div>
-      ) : null}
-      <GenRecipe recipeShown={recipeShown} />
+      {recipe && <GenRecipe recipe={recipe} />}
     </main>
   );
 }
