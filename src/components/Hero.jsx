@@ -61,7 +61,7 @@ export default function Hero() {
         </button>
       </form>
 
-      {ingredients.length > 0 && (
+      {ingredients.length >= 0 && (
         <IngredientList ingredients={ingredients} getRecipe={fetchRecipe} />
       )}
 
