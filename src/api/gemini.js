@@ -20,12 +20,12 @@ export async function getRecipeFromGemini(ingredients) {
 You are a pro chef. Make ONE recipe using ONLY:
 ${ingredients.join(", ")}
 
-Format:
+Format (keep the responses like the format specified everytime without fail for better user experience):
 # Recipe Name
 ## Ingredients
 - item
 ## Instructions
-1. Step...
+1. Step 1: and so on
         `.trim();
 
         const result = await genAI.models.generateContent({
