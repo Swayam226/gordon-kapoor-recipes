@@ -17,7 +17,7 @@ export async function getRecipeFromServer(ingredients) {
 
         const data = await response.json();
 
-        return data.recipe || "AI chef crashed. Try again.";
+        return data.text || "AI chef crashed. Try again.";
     } catch (err) {
         console.error("Error fetching recipe:", err);
         return "AI chef crashed. Try again.";
