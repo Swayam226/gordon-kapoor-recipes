@@ -1,7 +1,8 @@
 import { useState } from "react";
 import GenRecipe from "./GenRecipe";
 import IngredientList from "./IngredientList";
-import { getRecipeFromGemini } from "../api/gemini";
+// import { getRecipeFromGemini } from "../api/gemini";
+import { getRecipeFromGemini } from "../utils/getRecipe";
 
 export default function Hero() {
   const [ingredients, setIngredients] = useState([]);
