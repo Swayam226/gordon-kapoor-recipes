@@ -1,12 +1,57 @@
-# React + Vite
+# 🍳 Recipe Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal web app that generates recipes based on the ingredients you have on hand. Perfect for when you're too tired to think about what to eat!
 
-Currently, two official plugins are available:
+**Visit the live demo:** [recipe-generator-zenith.vercel.app](https://recipe-generator-zenith.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Ingredient-Based:** Get recipe ideas using only the ingredients you already have.
+- **Simple Interface:** Easy-to-use and clean UI for a no-fuss experience.
+- **Quick Results:** Instantly generates a recipe to get you cooking faster.
+
+---
+
+## 🛠️ Tech Stack
+
+This project is built using the following technologies:
+
+- **Frontend:** [React](https://reactjs.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** Tailwind CSS
+- **Package Manager:** [pnpm](https://pnpm.io/)
+
+---
+
+## 🚀 Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You will need [Node.js](https://nodejs.org/en/) (which includes npm) and [pnpm](https://pnpm.io/installation) installed on your system.
+
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone [https://github.com/Swayam226/recipe-generator.git](https://github.com/Swayam226/recipe-generator.git)
+    ```
+2.  **Navigate to the project directory:**
+    ```sh
+    cd recipe-generator
+    ```
+3.  **Install dependencies using pnpm:**
+    ```sh
+    pnpm install
+    ```
+
+### Running the Project
+
+To start the development server, run:
+
+```sh
+pnpm run dev
+```
