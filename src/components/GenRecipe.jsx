@@ -4,7 +4,7 @@ export default function GenRecipe(props) {
   return (
     <section
       aria-live="polite"
-      className="w-250 bg-amber-400 rounded-xl p-8 mt-6"
+      className="w-75 md:w-250 bg-amber-400 rounded-xl p-8 mt-6"
     >
       <h2 className="text-amber-850 text-2xl font-bold mb-4">
         Have a delight!

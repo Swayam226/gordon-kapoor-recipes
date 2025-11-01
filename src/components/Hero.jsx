@@ -28,7 +28,7 @@ export default function Hero() {
   }
 
   return (
-    <main className="flex justify-center items-center pt-20 flex-col gap-20 mr-35 ml-35">
+    <main className="flex justify-center items-center pt-20 flex-col gap-20 mr-6 ml-6  md:mr-35 md:ml-35">
       <div id="tagline" className="flex justify-center w-full max-w-4xl px-4">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-900 leading-tight text-shadow-amber">
@@ -44,14 +44,14 @@ export default function Hero() {
       </div>
 
       <form
-        className="flex flex-row gap-22 justify-center"
+        className="flex sm:flex-row flex-col gap-10 md:gap-22 justify-center items-center"
         action={handleSubmit}
       >
         <input
           aria-label="Add Ingredients"
           type="text"
           placeholder="e.g. spinach"
-          className="drop-shadow-lg hover:drop-shadow-xl bg-gray-100 h-12 w-150 rounded-md pl-2 text-amber-900 placeholder:text-amber-800"
+          className="drop-shadow-lg hover:drop-shadow-xl bg-gray-100 h-12 w-75 md:h-12 md:w-150 rounded-md pl-2 text-amber-900 placeholder:text-amber-800"
           name="ingredient"
         />
         <button
