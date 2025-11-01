@@ -1,5 +1,5 @@
 // src/utils/getRecipe.js
-export async function getRecipeFromServer(ingredients) {
+export async function getRecipeFromGemini(ingredients) {
     if (!ingredients.length) {
         return "Can't find anything :(";
     }
