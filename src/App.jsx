@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Hero />
       </div>
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
