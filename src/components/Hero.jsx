@@ -50,7 +50,7 @@ export default function Hero() {
         <input
           aria-label="Add Ingredients"
           type="text"
-          placeholder="e.g. spinach"
+          placeholder="bread, cheese, tomatoes..."
           className="drop-shadow-lg hover:drop-shadow-xl bg-gray-100 h-12 w-75 md:h-12 md:w-150 rounded-md pl-2 text-amber-900 placeholder:text-amber-800"
           name="ingredient"
         />
