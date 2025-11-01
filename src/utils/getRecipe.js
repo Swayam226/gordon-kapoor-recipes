@@ -7,7 +7,7 @@ export async function getRecipeFromGemini(ingredients) {
 
     try {
         // send ingredients to your secure serverless function
-        const response = await fetch("/api/generate", {
+        const response = await fetch("/api/generate.js", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ ingredients }),
